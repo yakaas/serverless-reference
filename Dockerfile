@@ -14,3 +14,7 @@ RUN     echo 'Installing serverless beta' && \
         npm install -g serverless@beta && \
         which serverless
 
+ADD     ./bootstrap.sh /tmp/bootstrap.sh
+
+CMD     bash -C '/tmp/bootstrap.sh'
+
